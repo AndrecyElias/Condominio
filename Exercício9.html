@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<title>Aula1 - Desenvolvimento Mobile 21/02/2019</title>
+    <meta charset="utf-8" />
+<body>
+
+  <th>Especifique que o servidor aceita apenas arquivos de imagem no upload do arquivo:</th>
+<form>
+  <input type="file" name="pic" accept="image/*">
+  <input type="submit">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com uma imagem como um botao de envio. O botão de envio esta alinhado a direita:</th>
+<form>
+  Primeiro Nome: <input type="text" name="fname"><br>
+  <input type="image" src="imagens\submit.gif" alt="Submit" align="right" width="100" height="100">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com uma imagem que representa o botao de envio:</th>
+<form>
+  Primeiro Nome: <input type="text" name="fname"><br>
+  <input type="image" src="imagens\submit.gif" alt="Submit" width="100" height="100">
+</form>
+<br>
+<br>
+
+<th>Um formulario HTML com autocomplete ativado (e desativado para um campo de entrada):</th>
+<form autocomplete="on">
+  Primeiro Nome:<input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  E-mail: <input type="email" name="email" autocomplete="off"><br>
+  <input type="submit">
+</form>
+<br>
+<br>
+
+<th>Deixe o campo de entrada "Primeiro nome" obter automaticamente o foco quando a pagina for carregada:</th>
+<form>
+  Primeiro nome: <input type="text" name="fname" autofocus><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="submit">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com uma caixa de selecao pre-selecionada:</th>
+<form>
+  <input type="checkbox" name="vehicle" value="Bike"> Tenho Bicicleta!<br>
+  <input type="checkbox" name="vehicle" value="Car" checked> Tenho Carro!<br>
+  <input type="submit" value="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um formulario HTML no qual a direcao do texto do campo sera enviada:</th>
+<form>
+  Primeiro Nome: <input type="text" name="fname" dirname="fname.dir">
+  <input type="submit" value="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com um campo de entrada desativado:</th>
+<form>
+  Primeiro nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname" disabled><br>
+  <input type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+<th>Um campo de entrada localizado fora do formulario HTML (mas ainda faz parte do formulario):</th>
+<form id="form1">
+  Pimeiro Nome: <input type="text" name="fname"><br>
+  <input type="submit" value="Submit">
+</form>
+Sobrenome: <input type="text" name="lname" form="form1">
+<br>
+<br>
+
+<th>Um formulario HTML com dois botoes de envio, com açoes diferentes</th>
+<form>
+  Primeiro Nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="submit" value="Enviar"><br>
+  <input type="submit" formaction="/action_page2.php" value="Enviar para outra pagina">
+</form>
+<br>
+<br>
+
+<th>Enviar dados de formulario codificados por padrao (o primeiro botao de envio) e codificados como "dados de varias partes / formulario" (o segundo botao de envio):</th>
+<form action="/action_page_binary.asp" method="post">
+  Nome: <input type="text" name="fname"><br>
+  <input type="submit" value="Enviar">
+  <input type="submit" formenctype="multipart/form-data" value="Enviar as Multipart/form-data">
+</form>
+<br>
+<br>
+
+<th>O segundo botao de envio substitui o metodo HTTP do formulario</th>
+<form action="/action_page.php" method="get">
+  Primeiro Nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="submit" value="Enviar">
+  <input type="submit" formmethod="post" value="Enviar usando o post">
+</form>
+<br>
+<br>
+
+<th>Um formulario com dois botoes de envio (com e sem validacao):</th>
+<form action="/action_page.php">
+  E-mail: <input type="email" name="userid"><br>
+  <input type="submit" value="Enviar"><br>
+  <input type="submit" formnovalidate="formnovalidate" value="Enviar sem Validar">
+</form>
+<br>
+<br>
+
+<th>Um formulario com dois botoes de envio, com diferentes janelas de destino:</th>
+<form action="/action_page.php">
+  Primeiro Nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="submit" value="Enviar como Normal">
+  <input type="submit" formtarget="_blank" value="Submeter a uma nova Janela">
+</form>
+<br>
+<br>
+
+<th>Defina uma imagem como o botao de envio, com atributos de altura e largura:</th>
+<form>
+  Nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="image" src="imagens\submit.gif" alt="Submit" width="100" height="100">
+</form>
+<br>
+<br>
+
+<th>Lista de lanche</th>
+<input list="Lanchinho">
+
+<datalist id="Lanchinho">
+  <option value="Goiaba">
+  <option value="Banana">
+  <option value="Maçã">
+  <option value="Mamão">
+  <option value="Lixia">
+</datalist>
+<br>
+<br>
+
+<th> Lista Antes de , Depois de, de X até Y</th>
+<form>
+  Entre com a data depois de 1980-01-01:
+  <input type="date" name="bday" max="1979-12-31">
+
+  Entre com a data antes de 2000-01-01:
+  <input type="date" name="bday" min="2000-01-02">
+
+  Quantidade entre (entre 1 e 5):
+  <input type="number" name="quantity" min="1" max="5">
+
+  <input type="submit" value="Enviar">
+
+</form>
+<br>
+<br>
+
+<th>Um elemento com um tamanho máximo de 10 caracteres:<th>
+<form>
+  Username: <input type="text" name="usrname" maxlength="10"><br>
+  <input type="submit" value="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um campo de upload de arquivo que aceita vários valores:</th>
+<form>
+  Select images: <input type="file" name="img" multiple>
+  <input type="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com três campos de entrada; dois campos de texto e um botão de envio:</th>
+<form>
+  Nome: <input type="text" name="fullname"><br>
+  Email: <input type="text" name="email"><br>
+  <input type="submit" value="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com um campo de entrada que pode conter apenas três letras (sem números ou caracteres especiais):</th>
+<form>
+Codigo do País: <input type="text" name="country_code" 
+pattern="[A-Za-z]{3}" title="Three letter country code">
+<input type="submit">
+</form>
+<br>
+<br>
+
+<th>Dois campos de entrada com um texto de espaço reservado:</th>
+<form>
+  <input type="text" name="fname" placeholder="First name"><br>
+  <input type="text" name="lname" placeholder="Last name"><br>
+  <input type="submit" value="Enviar">
+</form> 
+<br>
+<br>
+
+<th>Um formulário HTML com um campo de entrada somente leitura:</th>
+<form>
+  País: <input type="text" name="country" value="Norway" readonly><br>
+  <input type="submit" value="Enviar">
+</form>
+<br>
+<br>
+
+<th>Um formulário HTML com um campo de entrada obrigatório:</th>
+<form>
+  Nome do Usário: <input type="text" name="usrname" required>
+  <input type="submit">
+</form>
+<br>
+<br>
+
+
+<th>Um formulario HTML com um campo de entrada com intervalos numericos legais especificados:</th>
+<form>
+  <input type="number" name="points" step="3">
+  <input type="submit">
+</form>
+<br>
+<br>
+
+<th>Define uma imagem como o botao de envio, com atributos de altura e largura:</th>
+<form>
+  Nome: <input type="text" name="fname"><br>
+  Sobrenome: <input type="text" name="lname"><br>
+  <input type="image" src="imagens\submit.gif" alt="Submit" width="100" height="100">
+</form>
+
+</body>
+</html>
